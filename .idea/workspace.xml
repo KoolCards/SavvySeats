@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="667f0df7-abc5-47f1-841d-3bc673fb7484" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Djikstra.py" beforeDir="false" afterPath="$PROJECT_DIR$/Djikstra.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,12 +60,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1875" />
+          <entry key="py" value="1896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1875" />
+          <entry key="Python" value="1896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,13 +98,13 @@
         <entry file="file://$PROJECT_DIR$/Djikstra.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
-              <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+              <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1540065121635" expanded="true" signature="721:879" ph="..." />
-                <marker date="1540065121635" expanded="true" signature="879:880" ph="..." />
-                <marker date="1540065121635" expanded="true" signature="879:881" ph="..." />
-                <marker date="1540065121635" expanded="true" signature="2845:2958" ph="..." />
+                <marker date="1540067641069" expanded="true" signature="721:879" ph="..." />
+                <marker date="1540067641069" expanded="true" signature="879:880" ph="..." />
+                <marker date="1540067641069" expanded="true" signature="879:881" ph="..." />
+                <marker date="1540067641069" expanded="true" signature="2845:2958" ph="..." />
               </folding>
             </state>
           </provider>
@@ -169,7 +167,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540064601695" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540067641120" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -254,12 +252,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540045706365</updated>
       <workItem from="1540045716379" duration="2268000" />
-      <workItem from="1540049488752" duration="11273000" />
+      <workItem from="1540049488752" duration="11856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13541000" />
+    <option name="totallyTimeSpent" value="14124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="35" width="1429" height="773" extended-state="0" />
@@ -270,7 +268,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25306416" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25306416" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -280,7 +278,7 @@
       <window_info anchor="bottom" id="CheckStyle" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32892805" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -318,13 +316,13 @@
     <entry file="file://$PROJECT_DIR$/Djikstra.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
-          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1540065121635" expanded="true" signature="721:879" ph="..." />
-            <marker date="1540065121635" expanded="true" signature="879:880" ph="..." />
-            <marker date="1540065121635" expanded="true" signature="879:881" ph="..." />
-            <marker date="1540065121635" expanded="true" signature="2845:2958" ph="..." />
+            <marker date="1540067641069" expanded="true" signature="721:879" ph="..." />
+            <marker date="1540067641069" expanded="true" signature="879:880" ph="..." />
+            <marker date="1540067641069" expanded="true" signature="879:881" ph="..." />
+            <marker date="1540067641069" expanded="true" signature="2845:2958" ph="..." />
           </folding>
         </state>
       </provider>
