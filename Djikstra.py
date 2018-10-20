@@ -3,7 +3,7 @@ import random
 from random import shuffle
 import pyrebase
 
-rows = 150
+rows = 147
 features = 5
 num_seats = 6
 num_clusters = 2
@@ -22,7 +22,7 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 db = firebase.database().get()
-
+len = len(firebase.database().get())
 def retrieve_pref(data):
     for user1 in range(0, rows):
         for pref in range(0, features):

@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+<script>
+
+    var config = {
+        apiKey: "AIzaSyDSTS0M0po8Y7szvxKD1KOCEvgeFtBFjEk",
+        authDomain: "savvyseats-220013.firebaseapp.com",
+        databaseURL: "https://savvyseats-220013.firebaseio.com/",
+        projectId: "savvyseats-220013",
+        storageBucket: "<BUCKET>.appspot.com",
+        messagingSenderId: "<SENDER_ID>"
+    };
+    var defaultApp = firebase.initializeApp(config);
+    var defaultDatabase = defaultApp.database();
+    var userPref;
+    var userBinary;
+
+    function updateData(){
+        defaultDatabase.ref().on("value", function(snapshot) {
+            console.log("There are "+snapshot.numChildren()+" messages");
+            defaultDatabase.ref(snapshot.numChildren).set("/pref/" + userPref);
+            defaultDatabase.ref(snapshot.numChildren).set("/pref/" + userPref);
+
+        })
+    }
+    updateData();
+
+    console.log();
+</script>
 </html>
