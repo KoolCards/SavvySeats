@@ -1,13 +1,40 @@
-from matplotlib import pyplot as plt
 import numpy as np
 import random
 from random import shuffle
+import pyrebase
 
-rows = 550
-features = 6
-mat = np.random.rand(rows, features)
-mat[mat > 0.5] = 1.0
-mat[mat <= 0.5] = 0.0
+rows = 150
+features = 5
+num_seats = 6
+num_clusters = 2
+data = np.random.rand(rows, features)
+
+states = np.random.rand(rows, features)
+
+
+
+config = {
+    "apiKey": "AIzaSyDSTS0M0po8Y7szvxKD1KOCEvgeFtBFjEk",
+    "authDomain": "projectId.firebaseapp.com",
+    "databaseURL": "https://savvyseats-220013.firebaseio.com/",
+    "storageBucket": "projectId.appspot.com"
+}
+
+firebase = pyrebase.initialize_app(config)
+db = firebase.database().get()
+
+def retrieve_pref(data):
+    for user1 in range(0, rows):
+        for pref in range(0, features):
+            data[user1][pref] = db.val()[user1]["pref"][pref]
+    return data
+
+def retrieve_states(states):
+    for user1 in range(0, rows):
+        for pref in range(0, features):
+            states[user1][pref] = db.val()[user1]["states"][pref]
+    return states
+
 
 def initialize_preference():
     a = np.zeros(shape = (rows, features))
@@ -24,12 +51,11 @@ def compare_scores(index1, index2,mat, preferences):
             res -= (preferences[index1][i-1] + preferences[index2][i-1])
     return res
 
-def construct_mat(mat):
+def construct_mat(mat, data_pref):
     total = np.zeros(shape = (len(mat), len(mat)))
-    preferences = initialize_preference()
     for i in range(0, len(total)):
         for j in range(0, len(total)):
-            total[i][j] = compare_scores(i, j,mat, preferences)
+            total[i][j] = compare_scores(i, j,mat, data_pref)
     return total
 
 def find_smallest_and_not_visited(distances, visited):
@@ -64,9 +90,13 @@ def djikstra(similarity_matrix, start_x = 0):
         print(distances)
     return sort_tuple(distances)
 
-np.set_printoptions(threshold=np.inf)
-total = construct_mat(mat)
-print(total)
-print('*********************8')
+def returnRes(result):
+    newRes = np.random.rand(rows, 1)
+    for currIndex in range(0, rows):
+        newRes[currIndex] = result[currIndex][0]
+    return newRes, total
+
+data_pref = retrieve_pref(data)
+states = retrieve_states(states)
+total = construct_mat(states, data_pref)
 result = djikstra(total)
-print(result)
