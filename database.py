@@ -13,15 +13,15 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
-backing = np.zeros((150, 5))
-for user1 in range(0, 150):
+backing = np.zeros((147, 5))
+for user1 in range(0, 147):
     for pref in range(0, 5):
         backing[user1][pref] = pref + 1
     shuffle(backing[user1])
 
 print(backing)
 
-for user1 in range(0, 150):
+for user1 in range(0, 147):
     for pref in range(0, 5):
         db.child(user1).child("pref").update({pref: backing[user1][pref]})
         db.child(user1).child("states").update({pref: random.randint(0,1)})
