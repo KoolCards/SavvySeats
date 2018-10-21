@@ -20,8 +20,8 @@ for user1 in range(0, 147):
     shuffle(backing[user1])
 
 print(backing)
-
 for user1 in range(0, 147):
     for pref in range(0, 5):
+
         db.child(user1).child("pref").update({pref: backing[user1][pref]})
         db.child(user1).child("states").update({pref: random.randint(0,1)})
