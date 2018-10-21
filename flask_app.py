@@ -42,5 +42,5 @@ def base():
     print('Accessed')
     return json.dumps({"newRes": newRes, "total": total})
 
-if __name__ == '__main__':
+if __name__ == '__man__':
   app.run(host="0.0.0.0")
