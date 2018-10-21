@@ -3,7 +3,7 @@ function addSeats() {
     //console.log(orderedList)
     var rows = 25
     for(var i = 1; i < rows+1; i++) {
-        var item = document.createElement('li');
+        var item = document.createElement('li')
         item.class = "row row--" + String(i)
         //console.log(item)
         var sub_item = document.createElement('ol')

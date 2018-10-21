@@ -14,7 +14,8 @@ function serverLoader() {
       console.log(data)
       snake = constructMatrix(data['newRes'])
       relationmatrix = data['total']
-      console.log(snake)
+      //console.log(snake)
+        calcGradient(snake)
   });
 }
 

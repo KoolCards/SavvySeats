@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 16px;
 }
@@ -9,7 +10,7 @@ html {
 .plane {
     margin: -500px auto;
     max-width: 300px;
-    transform: rotate(-90deg) scale(0.8);
+    transform: rotate(-90deg) scale(0.85);
 }
 
 .cockpit {
@@ -141,9 +142,27 @@ ol {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
 }
+
+.seat .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    top: -5px;
+    left: 105%;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    display: block
+
+}
+
+
 .seat label:hover {
     cursor: pointer;
     box-shadow: 0 0 0px 2px #5C6AFF;
+    visibility: visible;
 }
 
 @-webkit-keyframes rubberBand {
