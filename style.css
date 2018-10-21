@@ -9,7 +9,7 @@ html {
 .plane {
   margin: -500px auto;
   max-width: 300px;
-  transform: rotate(-90deg) scale(1);
+  transform: rotate(-90deg) scale(0.75);
 }
 
 .cockpit {

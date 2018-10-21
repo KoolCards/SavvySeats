@@ -1,5 +1,5 @@
-function addSeats() {
-    var orderedList = document.getElementById("overall")
+function addSeats(id) {
+    var orderedList = document.getElementById(id)
     //console.log(orderedList)
     var rows = 25
     for(var i = 1; i < rows+1; i++) {
@@ -36,7 +36,8 @@ function addSeats() {
             sub_sub_sub_item1.id = special_stuff
             sub_sub_sub_item2.for = special_stuff
             sub_sub_sub_item2.innerText = special_stuff
-            sub_sub_sub_item2.id = 'r' + String(j) + 'c' + String(i-1)
+            if(id == 'overall') sub_sub_sub_item2.id = 'r' + String(j) + 'c' + String(i-1);
+            else sub_sub_sub_item2.id = 'x' + 'r' + String(j) + 'c' + String(i-1);
             sub_sub_item.appendChild(sub_sub_sub_item1)
             sub_sub_item.appendChild(sub_sub_sub_item2)
             sub_sub_item.appendChild(sub_sub_sub_item3)

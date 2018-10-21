@@ -10,14 +10,13 @@
 
   <!-- Bootstrap -->
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <script src ='js/autocreate.js'></script>
     <script src="js/computation.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-    <link href="css/style2.css" rel="stylesheet">
 
     <link href="css/themify-icons.css" rel="stylesheet">
   <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
@@ -30,6 +29,8 @@
       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
       <![endif]-->
+      <link href="css/style2.css" rel="stylesheet">
+
     </head>
     <body id="page-top" data-spy="scroll" data-target=".side-menu">
       <div class="container-fluid">
@@ -303,37 +304,57 @@
 
 
           </div>
-
-          <div class = "container">
-
-
-
-          </div>
-          <div id = "planeOutline" class="plane">
-              <div class="cockpit">
-                  <h1>Southwest AirLines</h1>
-              </div>
-              <div class="exit exit--front fuselage">
-
-              </div>
-              <div class="wrapper">
-                  <ol class="cabin fuselage" id = "overall">
-
-                  </ol>
-              </div>
-
-              <script>
-                  addSeats();
-                  //$('#wrapper').css({ transform: 'scale(.1)' });
-              </script>
-
-              <div class="exit exit--back fuselage">
-
-              </div>
-          </div>
         <!-- End: Speakers -->
       </div>
 
+        <h>Our Solution: </h>
+        <div class="plane" id = 'left_side'>
+            <div class="cockpit">
+                <h1 style = "transform: rotate(90deg)">SouthWest AirLines</h1>
+            </div>
+            <div class="exit exit--front fuselage">
+
+            </div>
+
+            <div class="wrapper">
+                <ol class="cabin fuselage" id = "overall">
+
+               </ol>
+            </div>
+
+            <script>
+                addSeats('overall');
+                serverLoader();
+             //$('#wrapper').css({ transform: 'scale(.1)' });
+            </script>
+
+            <div class="exit exit--back fuselage">
+            </div>
+        </div>
+
+        <h>The Current Model: </h>
+        <div class="plane" id = 'right_side' >
+            <div class="cockpit">
+                <h1 style = "transform: rotate(90deg)">SouthWest AirLines</h1>
+            </div>
+            <div class="exit exit--front fuselage">
+
+            </div>
+
+            <div class="wrapper">
+                <ol class="cabin fuselage" id = "overall2">
+
+               </ol>
+            </div>
+
+            <script>
+                addSeats('overall2');
+             //$('#wrapper').css({ transform: 'scale(.1)' });
+            </script>
+
+            <div class="exit exit--back fuselage">
+            </div>
+        </div>
 
         <div class="row footer-credit">
           <div class="col-md-6 col-sm-6">
@@ -344,21 +365,11 @@
       <!-- End: Footer -->
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
       <!-- Google Analytics -->
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29231762-2', 'auto');
-      ga('send', 'pageview');
-      </script>
     </body>
     </html>

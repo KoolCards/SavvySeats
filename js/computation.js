@@ -14,8 +14,8 @@ function serverLoader() {
       console.log(data)
       snake = constructMatrix(data['newRes'])
       relationmatrix = data['total']
-      //console.log(snake)
-        calcGradient(snake)
+      calcGradient(snake, 'A')
+      baseCase('overall2');
   });
 }
 
@@ -50,7 +50,7 @@ function constructMatrix(data) {
     return mat;
 }
 
-function calcGradient(snake) {
+function calcGradient(snake, id) {
     console.log(snake.length, snake[0].length)
     for(var i = 0; i < snake.length; i++) {
         for(var j = 0; j < snake[0].length;j++) {
@@ -73,11 +73,12 @@ function calcGradient(snake) {
                 accumulate += comparePpl(snake[i][j], snake[i][j+1])
                 neighbors+=1
             }
-            console.log(accumulate/neighbors)
+            //console.log(accumulate/neighbors)
             var score = 255*(accumulate/neighbors)/42 // 0 - 42
 
             //score = 255*
-            document.getElementById('r' + String(i) + 'c' + String(j)).style.background = 'rgb(' + score + ',' + score + ',' + score + ')'
+            if(id == 'A') document.getElementById('r' + String(i) + 'c' + String(j)).style.background = 'rgb(' + score + ',' + score + ',' + score + ')';
+            else document.getElementById('x' + 'r' + String(i) + 'c' + String(j)).style.background = 'rgb(' + score + ',' + score + ',' + score + ')'
         }
     }
 }
@@ -93,11 +94,12 @@ function shuffle(a) {
     return a;
 }
 
-function baseCase() {
+function baseCase(id) {
     var ar = new Array(148)
     for(var i = 0; i < ar.length;i++) {
         ar[i] = i;
     }
     ar = shuffle(ar);
     snakeBase = constructMatrix(ar)
+    calcGradient(snakeBase, 'B');
 }
