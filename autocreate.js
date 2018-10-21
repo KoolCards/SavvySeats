@@ -16,7 +16,9 @@ function addSeats() {
             var sub_sub_sub_item1 = document.createElement('input')
             sub_sub_sub_item1.type = "checkbox"
             var sub_sub_sub_item2 = document.createElement('label')
-
+            var sub_sub_sub_item3 = document.createElement('span')
+            sub_sub_sub_item3.innerText = 'Hello'
+            sub_sub_sub_item3.classList.add("tooltiptext")
             var special_stuff = ''
             if(j == 0) {
                 special_stuff = String(i) + 'A'
@@ -34,8 +36,10 @@ function addSeats() {
             sub_sub_sub_item1.id = special_stuff
             sub_sub_sub_item2.for = special_stuff
             sub_sub_sub_item2.innerText = special_stuff
+            sub_sub_sub_item2.id = 'r' + String(j) + 'c' + String(i-1)
             sub_sub_item.appendChild(sub_sub_sub_item1)
             sub_sub_item.appendChild(sub_sub_sub_item2)
+            sub_sub_item.appendChild(sub_sub_sub_item3)
             sub_item.appendChild(sub_sub_item)
         }
         item.appendChild(sub_item)
