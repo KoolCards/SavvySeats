@@ -3,4 +3,4 @@ api_version: 1
 
 handlers:
 - url: /
-  script: home.app
+  script: flask_app.py
