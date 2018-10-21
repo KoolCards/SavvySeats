@@ -69,7 +69,7 @@ def find_smallest_and_not_visited(distances, visited):
 
 def sort_tuple(distances):
     new = enumerate(distances)
-    return sorted(new, key=lambda x: x[1])
+    return list(map(lambda z: z[0], sorted(new, key=lambda x: x[1])))
 
 def djikstra(similarity_matrix, start_x = 0):
     visited = [False for i in range(0, len(similarity_matrix))]
@@ -86,15 +86,13 @@ def djikstra(similarity_matrix, start_x = 0):
         #print(distances)
     return sort_tuple(distances)
 
-def returnRes(result):
-    newRes = np.random.rand(rows, 1)
-    for currIndex in range(0, rows):
-        newRes[currIndex] = result[currIndex][0]
-    return newRes, total
+def returnRes(result, total):
+    return result, total.tolist()
 
+"""
 db, rows = initialize()
 data_pref = retrieve_pref(db, rows)
 states = retrieve_states(db, rows)
 total = construct_mat(states, data_pref)
 result = djikstra(total)
-newRes, total = returnRes(result)
+newRes, total = returnRes()"""

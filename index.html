@@ -28,7 +28,6 @@
             console.log("There are "+snapshot.numChildren()+" messages");
             defaultDatabase.ref(snapshot.numChildren).set("/pref/" + userPref);
             defaultDatabase.ref(snapshot.numChildren).set("/pref/" + userPref);
-
         })
     }
     updateData();

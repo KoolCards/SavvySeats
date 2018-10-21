@@ -5,6 +5,7 @@ from flask import request
 from io import BytesIO
 import requests
 from Djikstra import *
+import json
 
 config = {
     "apiKey": "AIzaSyDSTS0M0po8Y7szvxKD1KOCEvgeFtBFjEk",
@@ -37,9 +38,9 @@ def base():
     states = retrieve_states(db, rows)
     total = construct_mat(states, data_pref)
     result = djikstra(total)
-    newRes, total = returnRes(result)
+    newRes, total = returnRes(result, total)
     print('Accessed')
-    return jsonify(data)
+    return json.dumps({"newRes": newRes, "total": total})
 
 if __name__ == '__main__':
   app.run(host="0.0.0.0")
